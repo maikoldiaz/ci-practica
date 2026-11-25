@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+.ruff_cache/
+
+# Entornos virtuales
+.venv/
+venv/
+env/
+
+# Configuración local y secretos: nunca al repositorio
+.env
+.env.*
+!.env.example
+
+# Editores y sistema
+.vscode/
+.idea/
+.DS_Store
