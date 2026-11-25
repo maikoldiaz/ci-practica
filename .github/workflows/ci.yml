@@ -8,16 +8,13 @@ jobs:
   pruebas:
     runs-on: ubuntu-latest
     steps:
-      - name: Traer el código
-        uses: actions/checkout@v7
+      - uses: actions/checkout@v7
 
-      - name: Preparar Python
-        uses: actions/setup-python@v7
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.11"
 
-      - name: Instalar dependencias
-        run: python -m pip install -r requirements.txt
+      - run: python -m pip install -r requirements.txt
 
-      - name: Ejecutar pruebas
-        run: python -m pytest -v
+      - name: Ejecutar pruebas y guardar la salida
+        run: python -m pytest -v | tee salida_pytest.txt
